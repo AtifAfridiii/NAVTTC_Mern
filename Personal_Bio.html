@@ -1,39 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biography</title>
 </head>
+<style>
+    header {
+        color: cadetblue;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        background-color: aquamarine;
+        border-radius: 50px;
+        max-width: 300px;
+
+    }
+
+    #nav {
+        color: red;
+        text-align: end;
+        padding: 100px;
+
+    }
+
+    .section {
+        color: blueviolet;
+        text-align: center;
+        padding: 10px;
+        margin: 30px;
+    }
+    .list{
+        list-style: square;
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+       
+        color: black;
+    }
+
+    footer {
+        justify-items: center;
+        background: black;
+        color: red;
+        max-width: 200px;
+        border-radius: 15px;
+        padding: 10px;
+    }
+</style>
+
 <body>
     <header>
         <h1>My Website</h1>
     </header>
 
-    <nav>
+    <nav id="nav">
         <a href="#home" target="_blank">Go to Homepage</a>
     </nav>
 
-    <section>
+    <section class="section">
         <img src="img/car.jpg" width="100px" alt="My Profile Picture - A car image">
-        
+
         <p>
-            My name is <strong>Atif Afridi</strong>, studying at 
-            <strong>Agriculture University of Peshawar</strong>. 
+            My name is <strong>Atif Afridi</strong>, studying at
+            <strong>Agriculture University of Peshawar</strong>.
             I am <em>21</em> years old.
         </p>
 
         <p>This is one of my favorite game:</p>
-        <iframe 
-            src="https://www.youtube.com/embed/MhwMY-w7S1k?si=K2pdtmbFkzuD3IeI" 
-            width="200" 
-            height="200" 
-            
-            >
+        <iframe src="https://www.youtube.com/embed/MhwMY-w7S1k?si=K2pdtmbFkzuD3IeI" width="200" height="200">
         </iframe>
 
         <p>My favorite hobbies are:</p>
-        <ul>
+        <ul class="list">
             <li>Playing Video Games</li>
             <li>Tourism</li>
         </ul>
@@ -44,4 +84,5 @@
         <p>Email: <a href="mailto:example@gmail.com">example@gmail.com</a></p>
     </footer>
 </body>
+
 </html>

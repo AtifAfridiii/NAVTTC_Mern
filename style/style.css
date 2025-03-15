@@ -1,0 +1,43 @@
+*{
+    padding: 0px;
+    margin: 0px;
+
+}
+h1{
+    background-color: aquamarine;
+    margin: 30px;
+    border: 5px ;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.profile-pic{
+    color: purple;
+    font-size: 31px;
+    margin-left:10px ;
+   letter-spacing: 10px;
+}
+.skills{
+    margin-left: 10px;
+    color: purple;
+    letter-spacing: 10px;
+}
+.hobbies{
+    margin-left: 10px;
+    color: purple;
+    letter-spacing: 10px;
+}
+.table-data{
+margin: 30px;
+color: crimson;
+}
+.google-link{
+    margin-right: 10px;
+    color: red;
+    display: flex;
+    justify-content: end;
+
+}
