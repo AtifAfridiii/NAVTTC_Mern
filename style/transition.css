@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.box{
+  
+    height: 150px;
+    width: 150px;
+    background-color: rgb(39, 4, 4);
+    transition: background-color 3s ease;
+} 
+.box:hover{
+    background-color: rgb(119, 6, 154);
+    border-top-right-radius:50px ;
+    border-bottom-left-radius:50px ;
+}
+
+input {
+    width: 200px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: red; 
+    box-shadow: 0 0 8px #4CAF50;
+    outline: none; 
+}
+
+li{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   transition: all 0.5s linear;
+  
+}
+li:nth-child(2n){
+    color: red;
+ background-color: yellow;
+ border-radius: 50px;
+
+}
+.btn{
+    height: 30px;
+    width: 150px;
+    transition: background-color 0.5s ease;
+   
+}
+.btn:active{
+    background-color: green;
+    border: 2px dotted red;
+    border-radius: 30px;
+    transform: rotate(160deg);
+}
+
+/* @keyframes move{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(100px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+} */
+
+@keyframes example {
+    0%   {background-color:red; left:0px; height: 10px; top:0px;}
+    25%  {background-color:yellow; left:200px; width: 10px; height: 70px; top:0px;}
+    50%  {background-color:blue; left:200px; ;  ;; top:200px;}
+    75%  {background-color:green; left:0px; width: 10px ;top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+  
+  /* The element to apply the animation to */
+  /* div {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+  
+  } */
+.box1{
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate ;
+    
+}
+p{
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+p::first-letter{
+    font-size: 30px;
+    color: red;
+   
+}
+p::before{
+    content: "❤️";
+    background-color: black;
+}
+p::after{
+    content: "😒";
+    background-color: black;
+}
