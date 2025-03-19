@@ -1,0 +1,58 @@
+.box {
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+}
+
+.static {
+    background-color: #4CAF50;
+    position: static;
+}
+
+.relative {
+    background-color: #2196F3;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.absolute {
+    background-color: #FF9800;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+}
+
+.fixed {
+    background-color: #E91E63;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.sticky {
+    background-color: #9C27B0;
+    position: sticky;
+    top: 0; /* Sticks at the top while scrolling */
+}
+
+.container {
+ position: relative; /* Required for absolute positioning inside */
+    height: 200px;
+    background-color: red;
+    margin-top: 20px; 
+}
+
+.content {
+    height: 1000px; /* Just for scroll effect */
+}
+
+
+@media(max-width: 200px){
+   body{
+         background-color: red;
+         height: 50px;
+   }
+}

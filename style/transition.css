@@ -62,7 +62,7 @@ li:nth-child(2n){
     transform: rotate(160deg);
 }
 
-/* @keyframes move{
+@keyframes move{
     0%{
         transform: translateX(0);
     }
@@ -72,7 +72,7 @@ li:nth-child(2n){
     100%{
         transform: translateX(0);
     }
-} */
+}
 
 @keyframes example {
     0%   {background-color:red; left:0px; height: 10px; top:0px;}
@@ -119,4 +119,28 @@ p::before{
 p::after{
     content: "😒";
     background-color: black;
+}
+.conatiner{
+    height: 100px;
+    width: 100px;
+    background-color: violet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.conatiner:hover{
+   background-image: url('https://images.pexels.com/photos/31189719/pexels-photo-31189719/free-photo-of-winter-train-crossing-at-sunset-in-canada.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-position: top left;
+    background-size: cover;
+    border-image-width: 100px;
+    border-radius: 50px;
+    border-image-slice: 1;
+    transition: background-image 0.5s ease;
+  border: 2px solid black;
+  animation-name: move;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate ;
 }
