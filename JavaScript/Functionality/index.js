@@ -20,16 +20,28 @@ console.log(`A value is : ${a}`);
 let b = Changed ;
 console.log(`B value is : ${b}`);
 
-let temp = a ;
-a=Changed ;
-b=temp
-console.log(`Values are swapped A : ${a} and value of B : ${b}`);
+//  ============ First Method  Swapping values ============
+// let temp = a ;
+// a=Changed ;
+// b=temp
+// console.log(`Values are swapped A : ${a} and value of B : ${b}`);
+
+
+//  ============ Second Method  Swapping values ============
 
 b=b-a ;
 a=a+b ;
 b=a-b ;
 
 console.log(`Values are swapped A : ${a} and value of B : ${b}`);
+
+console.log(true&&false);
+
+console.log(true||false);
+
+
+let $name = 'Rahul';
+console.log(`Name is : ${$name}`);
 
 
 
