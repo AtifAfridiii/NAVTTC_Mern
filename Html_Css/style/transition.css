@@ -9,7 +9,7 @@ body{
     height: 100vh;
 }
 .box{
-  
+
     height: 150px;
     width: 150px;
     background-color: rgb(39, 4, 4);
@@ -30,9 +30,9 @@ input {
 }
 
 input:focus {
-    border-color: red; 
+    border-color: red;
     box-shadow: 0 0 8px #4CAF50;
-    outline: none; 
+    outline: none;
 }
 
 li{
@@ -41,7 +41,7 @@ li{
     justify-content: center;
     align-items: center;
    transition: all 0.5s linear;
-  
+
 }
 li:nth-child(2n){
     color: red;
@@ -53,7 +53,7 @@ li:nth-child(2n){
     height: 30px;
     width: 150px;
     transition: background-color 0.5s ease;
-   
+
 }
 .btn:active{
     background-color: green;
@@ -81,14 +81,14 @@ li:nth-child(2n){
     75%  {background-color:green; left:0px; width: 10px ;top:200px;}
     100% {background-color:red; left:0px; top:0px;}
   }
-  
+
   /* The element to apply the animation to */
   /* div {
     width: 100px;
     height: 100px;
     position: relative;
     background-color: red;
-  
+
   } */
 .box1{
     width: 100px;
@@ -100,17 +100,17 @@ li:nth-child(2n){
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate ;
-    
+
 }
 p{
     font-size: 20px;
     font-weight: bold;
-    
+
 }
 p::first-letter{
     font-size: 30px;
     color: red;
-   
+
 }
 p::before{
     content: "❤️";
@@ -127,7 +127,7 @@ p::after{
     display: flex;
     justify-content: center;
     align-items: center;
- 
+
 }
 .conatiner:hover{
    background-image: url('https://images.pexels.com/photos/31189719/pexels-photo-31189719/free-photo-of-winter-train-crossing-at-sunset-in-canada.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
