@@ -1,6 +1,9 @@
 let Prime_Number =  Number(prompt('Enter number'));
 
-if( Prime_Number%2!=0 && Prime_Number%3!=0 ){
+if(Prime_Number<2){
+console.log('Not a prime number less than 2');
+
+}else if( Prime_Number%2!=0){
     console.log('It is Prime Number');
 
 }else{
