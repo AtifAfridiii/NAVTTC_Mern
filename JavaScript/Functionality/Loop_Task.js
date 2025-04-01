@@ -7,7 +7,7 @@ let User_input = Number(prompt("Enter number to guess "));
 while(true){
     if(User_input === Guess_Number){
         console.log(`You guessed it ${Guess_Number}`);
-        break ;
+        
     }else if(User_input!==Guess_Number){
         console.log(`Try again ${Guess_Number} `);
         User_input = Number(prompt("Enter number to guess "));

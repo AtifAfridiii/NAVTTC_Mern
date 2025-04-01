@@ -19,6 +19,6 @@ Value1 = Value2 ;
 Value2 = Temp ;
 
 console.log(`After Swap Value1 : ${Value1}`);
-console.log(`After Swap Value1 : ${Value2}`);
+console.log(`After Swap Value2 : ${Value2}`);
 console.log(false&&true||true);
 
