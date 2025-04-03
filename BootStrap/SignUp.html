@@ -108,8 +108,10 @@ document.getElementById('button').onclick= ()=>{
     let confirmPassword = document.getElementById('confirm password').value;
     if(password!==confirmPassword){
        alert('Passoward doest match');
+    }else if(password.length&&confirmPassword.length<6){
+        alert('passoward is too short');
     }else{
-        alert('You have successfully signed up');
+        alert('succesfully signed up');
     }
 }
 
