@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guessing Game</title>
 
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md shadow-lg shadow-black">
+    <h1 class="text-3xl font-bold text-center text-indigo-600 mb-6">Guess The Number</h1>
 
-    <script src="./Functionality/Loop_Task.js"></script>
+    <div id="game-container" class="space-y-4">
+      <p id="instructions" class="text-gray-600">Enter a number between 0 and 9 to guess the secret number.</p>
+
+      <input type="number" id="guessInput" class="w-full p-3 border border-gray-300 rounded-md" placeholder="Enter your guess" />
+
+      <button id="submitGuess" class="w-full bg-indigo-600 text-white p-3 rounded-md hover:bg-indigo-700 focus:outline-none font-bold">Submit Guess</button>
+
+      <p id="message" class="text-center text-gray-600"></p>
+
+      <div id="retry-container" class="hidden">
+        <p class="text-center text-gray-600">Try again! You have <span id="attempts-left" class="font-bold text-red-500">3</span> attempts left.</p>
+      </div>
+    </div>
+  </div>
+  <script src="./Functionality/Loop_Task.js" defer></script>
 </body>
 </html>
