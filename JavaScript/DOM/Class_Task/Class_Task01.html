@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signup Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <div class="flex flex-col items-center justify-center min-h-screen p-6">
+    <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-5xl flex flex-col md:flex-row gap-10">
+
+      <!-- Signup Form -->
+      <div class="flex-1 ">
+        <h2 class="text-2xl font-bold mb-6 text-gray-800">Create Account</h2>
+        <form class="space-y-4">
+          <input id="name" type="text" placeholder="Enter Your Name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <input id="password" type="password" placeholder="Enter Password" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <input id="phone" type="number" placeholder="Phone Number" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <input id="email" type="email" placeholder="Enter Your Email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <button id="btn" type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition">Sign Up</button>
+        </form>
+      </div>
+
+      <!-- Table -->
+      <div class="flex-1 overflow-x-auto">
+        <h2 class="text-2xl font-bold mb-6 text-gray-800">User List</h2>
+        <table class="min-w-full table-auto border border-gray-300">
+          <thead class="bg-gray-200">
+            <tr>
+              <th class="border border-gray-300 px-4 py-2">Name</th>
+              <th class="border border-gray-300 px-4 py-2">Email</th>
+              <th class="border border-gray-300 px-4 py-2">Password</th>
+              <th class="border border-gray-300 px-4 py-2">Phone</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white">
+              <td  id="tname" class="border border-gray-300 px-4 py-2">Example Name </td>
+              <td id="temail" class="border border-gray-300 px-4 py-2">Example email</td>
+              <td id="tpassword" class="border border-gray-300 px-4 py-2">Example passoward </td>
+              <td id="tphone" class="border border-gray-300 px-4 py-2">Example phone</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="./Class_Task01.js"></script>
+</body>
+</html>
