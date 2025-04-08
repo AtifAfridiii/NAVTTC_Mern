@@ -27,7 +27,7 @@ for (let index = 0; index < mern.length ; index++) {
 
 }
 
- document.getElementsByClassName('Note')[0].className = 'highlight';;
+document.getElementsByClassName('Note')[0].className = 'highlight';
 document.getElementsByClassName('highlight')[0].style.backgroundColor='yellow';
 
 // document.getElementById('note1').className = 'highlight';
