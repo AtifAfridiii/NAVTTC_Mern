@@ -10,10 +10,44 @@ let TablePhone = document.querySelector('#tphone');
 
 let SignUpbtn = document.querySelector('#btn');
 
+
+SignUpbtn.disabled = true;
+
+
+function checkInputs() {
+  if (
+    Name.value !== '' &&
+    Password.value !== '' &&
+    Email.value.toLowerCase() !== '' && Email.value.toLowerCase().match('@gmail.com')&&
+    Phone.value  !== ''
+
+  ) {
+    SignUpbtn.disabled = false;
+  } else {
+    SignUpbtn.disabled = true;
+
+  }
+}
+
+
+[Name, Password, Email, Phone].forEach(input => {
+  input.addEventListener('input', checkInputs);
+});
+
 SignUpbtn.addEventListener('click', function (event) {
   event.preventDefault();
-  TableName.innerHTML = Name.value;
-  TableEmail.innerHTML = Email.value;
-  TablePassword.innerHTML = Password.value;
-  TablePhone.innerHTML = Phone.value;
+
+  if (
+    Name.value !== '' &&
+    Password.value !== '' &&
+    Email.value !== '' &&
+    Phone.value !== ''
+  ) {
+    TableName.innerHTML = Name.value;
+    TableEmail.innerHTML = Email.value;
+    TablePassword.innerHTML = Password.value;
+    TablePhone.innerHTML = Phone.value;
+  } else {
+    alert('Please fill all the fields');
+  }
 });
