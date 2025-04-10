@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
     <script>
 
-    let Button = document.createElement('button');
-    Button.innerText='Click Me';
-    let ulList = document.createElement('ul');
-  let changed = false ;
+        let Button = document.createElement('button');
+        Button.innerText = 'show';
 
-    function DisplayName(...names){
+        let ulList = document.createElement('ul');
+        let changed = false;
 
-      ulList.innerHTML='';
-    for (let index = 0; index < names.length; index++) {
-        let liList = document.createElement('li');
-       liList.innerText=names[index]
-        ulList.appendChild(liList);
+        function DisplayName(...names) {
 
-    }
+            ulList.innerHTML = '';
+            for (let index = 0; index < names.length; index++) {
+                let liList = document.createElement('li');
+                liList.innerText = names[index]
+                ulList.appendChild(liList);
 
-
-    }
+            }
 
 
-
-
-    Button.addEventListener('click',function(){
-        if(!changed){
-            DisplayName('Doe','Joe','John','McDonald Trump', 'Alien Musk');
-        document.body.appendChild(ulList);
-
-        }else{
-        ulList.remove();
-    }
-    changed=!changed
+        }
 
 
 
-    })
+        Button.addEventListener('click', function () {
+            if (!changed) {
+                DisplayName('Doe', 'Joe', 'John', 'McDonald Trump', 'Alien Musk');
+                document.body.appendChild(ulList);
 
-    document.body.appendChild(Button);
+            } else {
+
+                ulList.remove();
+            }
+            changed = !changed;
+            Button.textContent=changed?'show':'hide';
+
+
+
+
+        })
+
+        document.body.appendChild(Button);
 
 
 
@@ -55,4 +60,5 @@
 
 
 </body>
+
 </html>

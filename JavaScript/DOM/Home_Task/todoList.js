@@ -4,6 +4,7 @@ let ulParent = document.querySelector('#ulParent');
 emptyList = document.querySelector('#btnDiv');
 let noItem = document.querySelector('#noItemPara');
 
+
 btnInput.addEventListener('click', function (e) {
     e.preventDefault();
     let input = userInput.value.trim();
@@ -12,10 +13,13 @@ btnInput.addEventListener('click', function (e) {
         alert('Please enter a task');
 
 
+
         noItem.innerText='No task added yet';
 
         emptyList.appendChild(noItem);
-        
+
+
+
         return;
     }
 
