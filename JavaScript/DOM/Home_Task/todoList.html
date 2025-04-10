@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+   <div class="flex flex-col justify-center items-center p-10 w-full max-w-md">
+        <div  class="bg-gray-800 w-full text-center rounded-lg p-8 shadow-lg">
+            <h1 class="text-2xl font-bold text-white mb-6">Todo List</h1>
+            <form action="" class="flex flex-col gap-4">
+                <input
+                    type="text"
+                    id="todoInput"
+                    placeholder="Enter your Todo"
+                    class="border-2 border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white"
+                >
+                <button
+                    id="todoBtn"
+                    class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300"
+                >
+                    Add Task
+                </button>
+            </form>
+    </div>
+   </div>
+
+   <div class="flex flex-col justify-center w-full max-w-md mt-6">
+    <div id="btnDiv" class="bg-gray-800 w-full rounded-lg shadow-lg p-6">
+      <h2 class="text-2xl font-semibold text-white mb-4">Your Tasks</h2>
+      <p id="noItemPara" class="text-white"></p>
+      <ul id="ulParent" class="space-y-2">
+
+      </ul>
+    </div>
+  </div>
+
+
+
+
+
+   <script src="./todoList.js"></script>
+</body>
+</html>
