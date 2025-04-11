@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data</title>
+    <!-- Correct Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-6">
+
+        <button id="btn" class="px-4 py-2 m-5  bg-blue-500 text-white rounded hover:bg-blue-600">
+          Fetch User Data
+      </button>
+
+
+      <table id="table" class="table-auto border-collapse border border-gray-300 w-full ">
+          <thead>
+              <tr class="bg-gray-300">
+                  <th class="px-4 py-2 border">Name</th>
+                  <th class="px-4 py-2 border">Username</th>
+                  <th class="px-4 py-2 border">Email</th>
+              </tr>
+          </thead>
+          <tbody id="tableData">
+
+          </tbody>
+      </table>
+
+
+
+    <script src="./userData.js"></script>
+</body>
+</html>
