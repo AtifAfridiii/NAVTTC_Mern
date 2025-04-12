@@ -1,5 +1,10 @@
 
 let apiData = 'https://jsonplaceholder.typicode.com/users';
+let changed = false;
+
+let tableBody = document.querySelector('#tableData');
+tableBody.innerHTML = '';
+
 
 let FetchData = async () => {
 
@@ -10,12 +15,6 @@ let FetchData = async () => {
 
     console.log(data);
 
-    let tableBody = document.querySelector('#tableData');
-    tableBody.innerHTML = '';
-
-
-
-
     data.forEach(element => {
 
 
@@ -23,29 +22,71 @@ let FetchData = async () => {
         let TruserName = document.createElement('td');;
         let Tremail = document.createElement('td');
 
-        TrName.className = 'px-4 py-2 border';
-        TruserName.className = 'px-4 py-2 border';
-        Tremail.className = 'px-4 py-2 border';
+        TrName.className = 'px-4 py-2 border-2';
+        TruserName.className = 'px-4 py-2 border-2';
+        Tremail.className = 'px-4 py-2 border-2';
 
         TrName.innerText = element.name;
         TruserName.innerText = element.username;
         Tremail.innerText = element.email;
 
-
-
-
         let tableRow = document.createElement('tr');
 
-        tableRow.className='bg-green-500 items-center text-center text-sm'
-       
+        tableRow.className = 'bg-green-500 items-center text-center text-sm'
 
         tableRow.appendChild(TrName);
         tableRow.appendChild(TruserName);
         tableRow.appendChild(Tremail);
         tableBody.appendChild(tableRow);
 
-        // console.log(userData);
     });
+
+    let searchBtn = document.querySelector('#SearchBoxbtn');
+    let searchBox = document.querySelector('#searchBox');
+
+    searchBtn.addEventListener('click', () => {
+        let searchValue = searchBox.value.toLowerCase();
+
+        let searchData = data.filter(element => {
+            return element.name.toLowerCase().includes(searchValue);
+        });
+
+        tableBody.innerHTML = '';
+
+        searchData.forEach(element => {
+            let TrName = document.createElement('td');
+            let TruserName = document.createElement('td');
+            let Tremail = document.createElement('td');
+
+            TrName.className = 'px-4 py-2 border-2';
+            TruserName.className = 'px-4 py-2 border-2';
+            Tremail.className = 'px-4 py-2 border-2';
+
+            TrName.innerText = element.name;
+            TruserName.innerText = element.username;
+            Tremail.innerText = element.email;
+
+            let tableRow = document.createElement('tr');
+            tableRow.className = 'bg-green-500 items-center text-center text-sm';
+
+            tableRow.appendChild(TrName);
+            tableRow.appendChild(TruserName);
+            tableRow.appendChild(Tremail);
+            tableBody.appendChild(tableRow);
+        });
+
+        if (searchData.length === 0) {
+            tableBody.innerHTML = `
+                <tr>
+                    <td colspan="3" class="text-center py-4 text-red-500">
+                        No results found
+                    </td>
+                </tr>
+            `;
+        }
+    });
+
+
 
 
 
@@ -58,8 +99,13 @@ let ClickBtn = document.querySelector('#btn');
 
 ClickBtn.addEventListener('click', function () {
 
-    FetchData();
+    if (!changed) {
+        FetchData();
+    }
+    changed = true
 })
+
+
 
 
 
