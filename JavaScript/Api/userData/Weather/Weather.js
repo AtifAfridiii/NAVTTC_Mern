@@ -29,6 +29,7 @@ let fetchData = async () => {
 
     let WeatherInfo = document.querySelector('#weatherInfo');
     WeatherInfo.innerHTML = `
+     <h2 class="text-xl font-semibold text-gray-700 text-center mb-4"> ⛅Weather Details</h2>
       <p><strong>City:</strong> <span >${cityName}</span></p>
       <p><strong>Country:</strong> <span >${country}</span></p>
       <p><strong>Temperature:</strong> <span >${temperature}</span>°C</p>
@@ -36,7 +37,6 @@ let fetchData = async () => {
       <p><strong>Condition:</strong> <span >${condition}</span></p>
       <p><strong>Humidity:</strong> <span >${humidity}</span>%</p>
     `;
-
 
     WeatherInfo.classList.remove('hidden');
   } catch (error) {
@@ -46,6 +46,11 @@ let fetchData = async () => {
     let WeatherInfo = document.querySelector('#weatherInfo');
     WeatherInfo.innerHTML = `<p class="text-red-500">Failed to fetch weather data. ${error.message}</p>`;
     WeatherInfo.classList.remove('hidden');
+
+    // let errorMessage = document.querySelector('#errorMessage');
+    // errorMessage.classList.remove('hidden');
+
+
   }
 };
 
