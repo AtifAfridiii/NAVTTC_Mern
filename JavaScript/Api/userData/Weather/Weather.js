@@ -28,15 +28,46 @@ let fetchData = async () => {
 
 
     let WeatherInfo = document.querySelector('#weatherInfo');
-    WeatherInfo.innerHTML = `
-     <h2 class="text-xl font-semibold text-gray-700 text-center mb-4"> ⛅Weather Details</h2>
-      <p><strong>City:</strong> <span >${cityName}</span></p>
-      <p><strong>Country:</strong> <span >${country}</span></p>
-      <p><strong>Temperature:</strong> <span >${temperature}</span>°C</p>
-      <p><strong>Feels like:</strong> <span >${feelsLike}</span>°C</p>
-      <p><strong>Condition:</strong> <span >${condition}</span></p>
-      <p><strong>Humidity:</strong> <span >${humidity}</span>%</p>
+    let tableBody = document.querySelector('#tableBody');
+    let newRow = document.createElement('tr');
+
+    let City = document.createElement('td');
+    let Country = document.createElement('td');;
+    let Temperatur = document.createElement('td');
+
+    let Feels = document.createElement('td');
+    let Condition = document.createElement('td');;
+    let Humidity = document.createElement('td');
+
+    City.className = 'px-4 py-2 border border-black';
+    Country.className = 'px-4 py-2 border border-black';
+    Temperatur.className = 'px-4 py-2 border border-black';
+    Feels.className = 'px-4 py-2 border border-black';
+    Condition.className = 'px-4 py-2 border border-black';
+    Humidity.className = 'px-4 py-2 border border-black';
+    newRow.className='bg-blue-300 text-center border-black'
+
+    let detail = document.querySelector('#detail');
+
+    detail.innerHTML = `
+     <h2 class="text-xl font-semibold text-gray-700 text-center mb-4 "> ⛅Weather Details</h2>
     `;
+
+
+    City.innerHTML= `<p> <span >${cityName}</span></p>`;
+    Country.innerHTML=` <p> <span >${country}</span></p>`;
+    Temperatur.innerHTML= `<p> <span >${temperature}</span>°C</p>`;
+    Feels.innerHTML= `<p> <span >${feelsLike}</span>°C</p>`;
+    Condition.innerHTML=`<p> <span >${condition}</span></p>`;
+    Humidity.innerHTML= `<p> <span >${humidity}</span>%</p>`;
+
+    newRow.appendChild(City);
+    newRow.appendChild(Country);
+    newRow.appendChild(Temperatur);
+    newRow.appendChild(Feels);
+    newRow.appendChild(Condition);
+    newRow.appendChild(Humidity);
+    tableBody.appendChild(newRow);
 
     WeatherInfo.classList.remove('hidden');
   } catch (error) {
@@ -56,6 +87,7 @@ let fetchData = async () => {
 
 
 let Weather = document.querySelector('#fetchWeatherBtn');
+
 Weather.addEventListener('click', function () {
   let cityInput = document.querySelector('#cityInput');
   fetchData();

@@ -24,15 +24,26 @@
         <div class="text-center">
             <button
                 id="fetchWeatherBtn"
-                class="px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
+                class="px-6 py-2 bg-blue-500 text-white rounded  hover:bg-blue-600 transition">
                 Get Weather
             </button>
         </div>
 
 
-        <div id="weatherInfo" class="mt-6 hidden">
-
-
+        <div id="weatherInfo" class="mt-6 hidden w-full">
+            <p id="detail"></p>
+            <table class="border-collapse border-1 border-gray-300 w-full table-fixed">
+                <tr class="bg-gray-300">
+                    <th class="px-4 py-2 border border-black">City</th>
+                    <th class="px-4 py-2 border border-black">Country</th>
+                    <th class="px-4 py-2 border border-black">Temp</th>
+                    <th class="px-4 py-2 border border-black">Feels like</th>
+                    <th class="px-4 py-2 border border-black ">Conditio</br>n</th>
+                    <th class="px-4 py-2 border border-black">Humidity</th>
+                </tr>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
         </div>
 
 
